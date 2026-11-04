@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f6f5f0">
+    <meta name="description" content="Explora productos, arma tu carrito y compra desde cualquier dispositivo.">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/icon-180.png">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Mi Empresa Store — Compra con calma</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Mi Empresa Store, inicio">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M5 11.5 16 5l11 6.5v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-13Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M5.5 12 16 18l10.5-6M16 18v8.5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-name">mi empresa<span>store</span></span>
+      </a>
+
+      <nav class="header-links" aria-label="Navegación principal">
+        <a class="header-link header-link-active" href="#catalogo">Tienda</a>
+        <a class="header-link" href="#nuestra-seleccion">Nuestra selección</a>
+      </nav>
+
+      <button class="header-cart" type="button" data-open-cart aria-label="Abrir carrito">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="10" cy="20" r="1" fill="currentColor"/>
+          <circle cx="18" cy="20" r="1" fill="currentColor"/>
+        </svg>
+        <span>Mi carrito</span>
+        <span class="cart-count" data-cart-count>0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="nuestra-seleccion">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> BUENAS ELECCIONES, TODOS LOS DÍAS</p>
+          <h1>Encuentra eso<br>que te hace <em>bien.</em></h1>
+          <p class="hero-description">Una selección de cosas útiles y bonitas, elegidas para acompañarte en tu día a día.</p>
+          <a class="text-link" href="#catalogo">Descubre la colección <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-art">
+          <img class="hero-feature-image" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Auriculares esenciales de nuestra colección">
+          <span class="hero-image-shade" aria-hidden="true"></span>
+          <p class="hero-photo-label">DISEÑO · TECNOLOGÍA · HOGAR</p>
+          <div class="hero-note">
+            <span class="hero-note-mark" aria-hidden="true">✳</span>
+            <span><small>UNA SELECCIÓN CON INTENCIÓN</small><strong>Lo esencial, bien elegido.</strong></span>
+          </div>
+        </div>
+        <div class="hero-bottom">
+          <span>OBJETOS CON INTENCIÓN</span>
+          <span>01 — 06</span>
+        </div>
+      </section>
+
+      <section class="shop-section" id="catalogo">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow section-eyebrow">HECHO PARA TU DÍA A DÍA</p>
+            <h2>La tienda<span class="heading-period">.</span></h2>
+          </div>
+          <p class="results-count" data-results-count aria-live="polite"></p>
+        </div>
+
+        <div class="shop-toolbar">
+          <div class="category-list" data-categories aria-label="Filtrar por categoría"></div>
+          <label class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.6"/>
+              <path d="m16 16 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <span class="visually-hidden">Buscar productos</span>
+            <input type="search" data-search placeholder="¿Qué estás buscando?" autocomplete="off">
+            <kbd>Ctrl K</kbd>
+          </label>
+        </div>
+
+        <div class="store-notice" data-store-notice role="status" hidden></div>
+        <div class="product-grid" data-products aria-live="polite" aria-busy="true"></div>
+        <div class="empty-state" data-empty-state hidden>
+          <span aria-hidden="true">⌕</span>
+          <h3>No encontramos ese hallazgo.</h3>
+          <p>Prueba con otra búsqueda o elige una categoría distinta.</p>
+          <button class="text-link" type="button" data-clear-search>Ver todos los productos</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="/" aria-label="Mi Empresa Store, inicio">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M5 11.5 16 5l11 6.5v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-13Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M5.5 12 16 18l10.5-6M16 18v8.5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-name">mi empresa<span>store</span></span>
+      </a>
+      <p>Elegir bien también es disfrutar el camino.</p>
+      <span class="footer-year">© <span data-year></span> Mi Empresa Store</span>
+    </footer>
+
+    <div class="cart-scrim" data-cart-scrim hidden></div>
+    <aside class="cart-drawer" data-cart-drawer aria-labelledby="cart-title" aria-hidden="true" inert>
+      <div class="drawer-header">
+        <div>
+          <p class="eyebrow section-eyebrow">TUS BUENAS ELECCIONES</p>
+          <h2 id="cart-title">Mi carrito<span class="heading-period">.</span></h2>
+        </div>
+        <button class="icon-button" type="button" data-close-cart aria-label="Cerrar carrito">×</button>
+      </div>
+      <div class="cart-content" data-cart-items></div>
+      <div class="cart-empty" data-cart-empty>
+        <span aria-hidden="true">✳</span>
+        <h3>Aún no hay hallazgos.</h3>
+        <p>Los productos que te gusten aparecerán aquí.</p>
+        <button class="button button-dark" type="button" data-continue-shopping>Seguir explorando</button>
+      </div>
+      <div class="cart-summary" data-cart-summary hidden>
+        <div class="subtotal-row"><span>Subtotal</span><strong data-cart-total>S/ 0.00</strong></div>
+        <p class="shipping-note">Envío y detalles de entrega se coordinan al confirmar tu pedido.</p>
+        <button class="button button-accent checkout-button" type="button" data-checkout>Continuar con mi pedido <span aria-hidden="true">→</span></button>
+        <button class="continue-link" type="button" data-continue-shopping>Seguir descubriendo</button>
+      </div>
+      <p class="drawer-offline" data-cart-offline hidden>Conéctate a internet para confirmar tu pedido.</p>
+    </aside>
+
+    <dialog class="checkout-dialog" data-checkout-dialog aria-labelledby="checkout-title">
+      <form class="checkout-form" data-checkout-form>
+        <div class="dialog-heading">
+          <div>
+            <p class="eyebrow section-eyebrow">UN ÚLTIMO PASO</p>
+            <h2 id="checkout-title">Tus datos<span class="heading-period">.</span></h2>
+          </div>
+          <button class="icon-button" type="button" data-close-checkout aria-label="Cerrar formulario">×</button>
+        </div>
+        <p class="dialog-description">Déjanos estos datos para preparar tu pedido. Coordinaremos contigo los detalles de entrega.</p>
+        <label class="form-field">
+          <span>Nombre completo</span>
+          <input name="name" type="text" maxlength="120" autocomplete="name" required>
+        </label>
+        <label class="form-field">
+          <span>Correo electrónico</span>
+          <input name="email" type="email" maxlength="254" autocomplete="email" required>
+        </label>
+        <label class="form-field">
+          <span>Teléfono <small>opcional</small></span>
+          <input name="phone" type="tel" maxlength="24" autocomplete="tel">
+        </label>
+        <label class="form-field">
+          <span>Dirección de entrega</span>
+          <textarea name="address" maxlength="255" rows="2" autocomplete="street-address" required></textarea>
+        </label>
+        <div class="checkout-total"><span>Total del pedido</span><strong data-checkout-total>S/ 0.00</strong></div>
+        <p class="form-error" data-form-error role="alert" hidden></p>
+        <button class="button button-accent checkout-button" type="submit" data-submit-order>Confirmar pedido <span aria-hidden="true">→</span></button>
+      </form>
+      <section class="order-success" data-order-success hidden aria-live="polite">
+        <span class="success-mark" aria-hidden="true">✓</span>
+        <p class="eyebrow section-eyebrow">PEDIDO RECIBIDO</p>
+        <h2>¡Qué buena elección<span class="heading-period">.</span></h2>
+        <p data-success-message></p>
+        <button class="button button-dark" type="button" data-finish-order>Volver a la tienda</button>
+      </section>
+    </dialog>
+
+    <div class="update-banner" data-update-banner role="status" hidden>
+      <div>
+        <strong>Hay una nueva versión de la tienda.</strong>
+        <span>Actualiza para disfrutar las últimas mejoras.</span>
+      </div>
+      <button class="button button-light" type="button" data-update-app>Actualizar</button>
+      <button class="icon-button update-dismiss" type="button" data-dismiss-update aria-label="Más tarde">×</button>
+    </div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
